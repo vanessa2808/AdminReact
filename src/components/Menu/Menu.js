@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {Link, Router} from "react-router";
+
 class Menu extends Component {
 	render() {
 		return(
@@ -30,16 +26,15 @@ class Menu extends Component {
       </div>
     </div>
   </div>
-  <Router>
   <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div className="container">
-      <a className="navbar-brand" href="#">Vegefoods</a>
+      <a className="navbar-brand" href="index.html">Vegefoods</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="oi oi-menu" /> Menu
       </button>
       <div className="collapse navbar-collapse" id="ftco-nav">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item active"><a href="index.html" className="nav-link">Home</a></li>
+          <li className="nav-item active"><Link to="index.html" className="nav-link">Home</Link></li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
             <div className="dropdown-menu" aria-labelledby="dropdown04">
@@ -52,17 +47,16 @@ class Menu extends Component {
           </li>
           <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
           <li className="nav-item"><a href="blog.html" className="nav-link">Blog</a></li>
-          <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
-          <li className="nav-item"><a href="contact.html" className="nav-link">Login</a></li>
+          <li className="nav-item"><Link to="contact.html" className="nav-link">Contact</Link></li>
+          <li className="nav-item"><Link to="/Login" className="nav-link">Login</Link></li>
           <li className="nav-item cta cta-colored"><a href="cart.html" className="nav-link"><span className="icon-shopping_cart" />[0]</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  </Router>
 
 
-
+  
 </div>
 
 		);
